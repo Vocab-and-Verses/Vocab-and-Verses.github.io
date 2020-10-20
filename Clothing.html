@@ -48,7 +48,7 @@
       document.getElementById("next").style.visibility = "visible";
     }
     if (index < 10){
-      zeros = "0"
+      zeros = "00"
     }
     document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
@@ -60,6 +60,12 @@
     }
     else {
       index++;
+    }
+    if (index==9){
+      zeros = "00";
+    }
+    else if (index == 10) {
+      zeros = "0"
     }
     document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }

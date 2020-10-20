@@ -15,7 +15,7 @@
 <script>
   var index = 1;
   var capacity = 10;
-  var zeros = "00";
+  var zeros = "000";
   function nextCard() {
     if (index > 2){
       document.getElementById("prev").style.visibility = "visible";
@@ -31,7 +31,7 @@
       document.getElementById("next").style.visibility = "invisible";
     }
     if (index > 9){
-      zeros = "0"
+      zeros = "00"
     }
     document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
@@ -47,7 +47,7 @@
       document.getElementById("next").style.visibility = "visible";
     }
     if (index < 10){
-      zeros = "0"
+      zeros = "000"
     }
     document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
