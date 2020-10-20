@@ -30,7 +30,6 @@
       index +=2;
     }
     if (index+2 > capacity){
-      index = capacity;
       document.getElementById("next").style.visibility = "invisible";
     }
     if (index > 9){
@@ -41,11 +40,16 @@
 
 
   function prevCard() {
-    index-=2;
+    if (index % 2 == 0) {
+      index-=3;
+    }
+    else {
+      index-=2;
+    }
     if (index < 3){
       document.getElementById("prev").style.visibility = "invisible";
     }
-    if (index+2 <= capacity){
+    if (index+2 > capacity){
       index = capacity;
       document.getElementById("next").style.visibility = "visible";
     }
