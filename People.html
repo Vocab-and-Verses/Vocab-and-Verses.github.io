@@ -7,10 +7,13 @@
 
 <body>
 <h1>Work</h1>
-<button type = "button", onclick="flip()"><img src = "people-page-001.jpg", id="card"></button>
+<button type = "button", onclick="flip()"><img src = "people_0001.jpg", id="card"></button>
 <br>
-<button type = "button", id = "next", onclick="nextCard()">Next Card</button>
+<div class="nav">
 <button type = "button", id = "prev", onclick="prevCard()", style = "visibility: invisible;">Previous Card</button>
+<button type = "button", id = "next", onclick="nextCard()">Next Card</button>
+</div>
+<button type="button"><a href="Vocab.html">Back</a></button>
 
 </body>
 </html>
@@ -36,7 +39,7 @@
     if (index > 9){
       zeros = "00"
     }
-    document.getElementById("card").src = "people-page-"+zeros+index+".jpg";
+    document.getElementById("card").src = "people_"+zeros+index+".jpg";
   }
 
 
@@ -57,7 +60,7 @@
     if (index < 10){
       zeros = "000"
     }
-    document.getElementById("card").src = "people-page-"+zeros+index+".jpg";
+    document.getElementById("card").src = "people_"+zeros+index+".jpg";
   }
 
 
@@ -74,7 +77,7 @@
     else if (index == 10) {
       zeros = "00"
     }
-    document.getElementById("card").src = "people-page-"+zeros+index+".jpg";
+    document.getElementById("card").src = "people_"+zeros+index+".jpg";
   }
 
 </script>
