@@ -7,6 +7,60 @@
 
 <body>
 <h1>Home</h1>
-
+<button type = "button", onclick="flip()"><img src = "home-page-001.jpg", id="card"></button>
+<button type = "button", id = "next", onclick="nextCard()">Next Card</button>
+<button type = "button", id = "prev", onclick="prevCard()", style = "visibility: invisible;">Previous Card</button>
 </body>
 </html>
+<script>
+  var index = 1;
+  var capacity = 10;
+  var zeros = "00";
+  function nextCard() {
+    if (index > 2){
+      document.getElementById("prev").style.visibility = "visible";
+    }
+    if (index % 2 == 0) {
+      index++;
+    }
+    else {
+      index +=2;
+    }
+    if (index+2 > capacity){
+      index = capacity;
+      document.getElementById("next").style.visibility = "invisible";
+    }
+    if (index > 9){
+      zeros = "0"
+    }
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
+  }
+
+
+  function prevCard() {
+    index-=2;
+    if (index < 3){
+      document.getElementById("prev").style.visibility = "invisible";
+    }
+    if (index+2 <= capacity){
+      index = capacity;
+      document.getElementById("next").style.visibility = "visible";
+    }
+    if (index < 10){
+      zeros = "0"
+    }
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
+  }
+
+
+  function flip() {
+    if (index % 2 == 0){
+      index--;
+    }
+    else {
+      index++;
+    }
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
+  }
+
+</script>

@@ -7,14 +7,14 @@
 
 <body>
 <h1>School</h1>
-<button type = "button", onclick="flip"><img src = "school-page-001.jpg", id="card"></button>
-<button type = "button", id = "next", onclick="nextCard">Next Card</button>
-<button type = "button", id = "prev", onclick="prevCard">Previous Card</button>
+<button type = "button", onclick="flip()"><img src = "school-page-001.jpg", id="card"></button>
+<button type = "button", id = "next", onclick="nextCard()">Next Card</button>
+<button type = "button", id = "prev", onclick="prevCard()", style = "visibility: invisible;">Previous Card</button>
 </body>
 </html>
 <script>
   var index = 1;
-  var capacity = 22;
+  var capacity = 10;
   var zeros = "00";
   function nextCard() {
     if (index > 2){
@@ -33,7 +33,7 @@
     if (index > 9){
       zeros = "0"
     }
-    document.getElementById("card").innerHTML = "wallet-page-"+zeros+index;
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
 
 
@@ -47,20 +47,20 @@
       document.getElementById("next").style.visibility = "visible";
     }
     if (index < 10){
-      zeros = "00"
+      zeros = "0"
     }
-    document.getElementById("card").innerHTML = "wallet-page-"+zeros+index;
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
 
 
   function flip() {
     if (index % 2 == 0){
-      index++;
-    }
-    else {
       index--;
     }
-    document.getElementById("card").innerHTML = "wallet-page-"+zeros+index;
+    else {
+      index++;
+    }
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
 
 </script>
