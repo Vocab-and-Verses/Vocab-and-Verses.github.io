@@ -33,7 +33,7 @@
       index +=2;
     }
     if (index+2 > capacity){
-      document.getElementById("next").style.visibility = "invisible";
+      document.getElementById("next").style.visibility = "hidden";
     }
     if (index > 9){
       zeros = "0"
@@ -50,7 +50,7 @@
       index-=2;
     }
     if (index < 3){
-      document.getElementById("prev").style.visibility = "invisible";
+      document.getElementById("prev").style.visibility = "hidden";
     }
     if (index+2 > capacity){
       index = capacity;
