@@ -4,12 +4,12 @@
 <link rel = "stylesheet", href="index.css", type=text/css>
 <link rel="icon" href="icon.jpg">
 
-<title>Learn places Vocab</title>
+<title>Learn wallet Vocab</title>
 </head>
 
 <body>
-<h1>Work</h1>
-<button type = "button", onclick="flip()"><img src = "places-page-001.jpg", id="card"></button><br>
+<h1>Places</h1>
+<button type = "button", onclick="flip()"><img src = "wallet-page-001.jpg", id="card"></button><br>
 <div class="nav">
 <button type = "button", id = "prev", onclick="prevCard()", style = "visibility: hidden;">Previous Card</button>
 <button type = "button", id = "next", onclick="nextCard()">Next Card</button>
@@ -25,14 +25,14 @@
   var capacity = 10;
   var zeros = "00";
   function nextCard() {
-    if (index > 2){
-      document.getElementById("prev").style.visibility = "visible";
-    }
     if (index % 2 == 0) {
       index++;
     }
     else {
       index +=2;
+    }
+    if (index > 2){
+      document.getElementById("prev").style.visibility = "visible";
     }
     if (index+2 > capacity){
       document.getElementById("next").style.visibility = "hidden";
@@ -40,7 +40,7 @@
     if (index > 9){
       zeros = "0"
     }
-    document.getElementById("card").src = "places-page-"+zeros+index+".jpg";
+    document.getElementById("card").src = "school-page-"+zeros+index+".jpg";
   }
 
 
@@ -61,7 +61,7 @@
     if (index < 10){
       zeros = "00"
     }
-    document.getElementById("card").src = "places-page-"+zeros+index+".jpg";
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
 
 
@@ -78,7 +78,7 @@
     else if (index == 10) {
       zeros = "0"
     }
-    document.getElementById("card").src = "places-page-"+zeros+index+".jpg";
+    document.getElementById("card").src = "wallet-page-"+zeros+index+".jpg";
   }
 
 </script>

@@ -24,14 +24,14 @@
   var capacity = 10;
   var zeros = "00";
   function nextCard() {
-    if (index > 2){
-      document.getElementById("prev").style.visibility = "visible";
-    }
     if (index % 2 == 0) {
       index++;
     }
     else {
       index +=2;
+    }
+    if (index > 2){
+      document.getElementById("prev").style.visibility = "visible";
     }
     if (index+2 > capacity){
       document.getElementById("next").style.visibility = "hidden";

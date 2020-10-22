@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<h1>Work</h1>
+<h1>Food</h1>
 <button type = "button", onclick="flip()"><img src = "food-page-001.jpg", id="card"></button><br>
 <div class="nav">
   <button type = "button", id = "prev", onclick="prevCard()", style = "visibility: hidden;">Previous Card</button>
@@ -25,14 +25,14 @@
   var capacity = 10;
   var zeros = "00";
   function nextCard() {
-    if (index > 2){
-      document.getElementById("prev").style.visibility = "visible";
-    }
     if (index % 2 == 0) {
       index++;
     }
     else {
       index +=2;
+    }
+    if (index > 2){
+      document.getElementById("prev").style.visibility = "visible";
     }
     if (index+2 > capacity){
       document.getElementById("next").style.visibility = "hidden";
