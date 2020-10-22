@@ -53,8 +53,7 @@
     if (index < 3){
       document.getElementById("prev").style.visibility = "hidden";
     }
-    if (index+2 > capacity){
-      index = capacity;
+    if (index < capacity){
       document.getElementById("next").style.visibility = "visible";
     }
     if (index < 10){
