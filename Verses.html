@@ -7,9 +7,51 @@
 <title>Learn Verses</title>
 </head>
 
-
 <body>
-<h1>Welcome to Vocab and Verses!</h1>
-<button type="button"><a href="index.html">Back</a></button>
+<h1>Verses</h1>
+<button type = "button"><img src = "verses-page-001.jpg", id = "card"></button><br>
+<div class="nav">
+  <button type = "button", id = "prev", onclick="prevCard()", style = "visibility: hidden;">Previous Card</button>
+<button type = "button", id = "next", onclick="nextCard()">Next Card</button>
+</div>
+<button type="button"><a href="Vocab.html">Back</a></button>
+
 </body>
 </html>
+
+
+<script>
+  var index = 1;
+  var capacity = 30;
+  var zeros = "00";
+  function nextCard() {
+    index++;
+    if (index > 1){
+      document.getElementById("prev").style.visibility = "visible";
+    }
+    if (index+1 > capacity){
+      document.getElementById("next").style.visibility = "hidden";
+    }
+    if (index > 9){
+      zeros = "0"
+    }
+    document.getElementById("card").src = "verses-page-"+zeros+index+".jpg";
+  }
+
+
+  function prevCard() {
+    index--;
+    if (index < 2){
+      document.getElementById("prev").style.visibility = "hidden";
+    }
+    document.getElementById("next").style.visibility = "visible";
+    if (index < 10){
+      zeros = "00"
+    }
+    document.getElementById("card").src = "verses-page-"+zeros+index+".jpg";
+  }
+
+
+
+
+</script>
