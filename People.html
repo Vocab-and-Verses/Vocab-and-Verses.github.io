@@ -8,8 +8,7 @@
 
 <body>
 <h1>People</h1>
-<button type = "button", onclick="flip()"><img src = "people_0001.jpg", id="card", height="600", width="900"></button>
-<br>
+<button type = "button", onclick="flip()"><img src = "people-page-001.jpg", id = "card"></button><br>
 <div class="nav">
   <button type = "button", id = "prev", onclick="prevCard()", style = "visibility: hidden;">Previous Card</button>
 <button type = "button", id = "next", onclick="nextCard()">Next Card</button>
@@ -22,8 +21,8 @@
 
 <script>
   var index = 1;
-  var capacity = 40;
-  var zeros = "000";
+  var capacity = 10;
+  var zeros = "00";
   function nextCard() {
     if (index % 2 == 0) {
       index++;
@@ -38,9 +37,9 @@
       document.getElementById("next").style.visibility = "hidden";
     }
     if (index > 9){
-      zeros = "00"
+      zeros = "0"
     }
-    document.getElementById("card").src = "people_"+zeros+index+".jpg";
+    document.getElementById("card").src = "people-page-"+zeros+index+".jpg";
   }
 
 
@@ -56,9 +55,9 @@
     }
     document.getElementById("next").style.visibility = "visible";
     if (index < 10){
-      zeros = "000"
+      zeros = "00"
     }
-    document.getElementById("card").src = "people_"+zeros+index+".jpg";
+    document.getElementById("card").src = "people-page-"+zeros+index+".jpg";
   }
 
 
@@ -70,12 +69,12 @@
       index++;
     }
     if (index==9){
-      zeros = "000";
+      zeros = "00";
     }
     else if (index == 10) {
-      zeros = "00"
+      zeros = "0"
     }
-    document.getElementById("card").src = "people_"+zeros+index+".jpg";
+    document.getElementById("card").src = "people-page-"+zeros+index+".jpg";
   }
 
 </script>
