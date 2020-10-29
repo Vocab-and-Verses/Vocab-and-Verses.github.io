@@ -10,6 +10,8 @@
 <body>
 <h1>Verses</h1>
 <button type = "button"><img src = "verses-page-001.jpg", id = "card"></button><br>
+<button type = "button", onclick="play()">Play Audio</button>
+<audio id="audio" src="http://dev.interactive-creation-works.net/1/1.ogg"></audio><br>
 <div class="nav">
   <button type = "button", id = "prev", onclick="prevCard()", style = "visibility: hidden;">Previous Card</button>
 <button type = "button", id = "next", onclick="nextCard()">Next Card</button>
@@ -21,8 +23,9 @@
 
 
 <script>
+
   var index = 1;
-  var capacity = 30;
+  var capacity = 31;
   var zeros = "00";
   function nextCard() {
     index++;
@@ -50,7 +53,11 @@
     }
     document.getElementById("card").src = "verses-page-"+zeros+index+".jpg";
   }
-
+  function play() {
+    document.getElementById("audio").src = ""+index+".mp3"
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
 
 
 
