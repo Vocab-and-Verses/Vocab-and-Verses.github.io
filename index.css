@@ -4,7 +4,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute; /*Can also be `fixed`*/
+  position: absolute;
        left: 0;
        right: 0;
        top: 0;
@@ -15,7 +15,7 @@ h1 {
   font-size: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: auto;
 }
